@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+</head>
+
+<body>
+    <h1 style="color: brown; text-align: center; margin-top: 5%; font-style: italic;">
+        Gaming World
+    </h1>
+    <h4>!!!Welcome to the Game Registration Form!!!</h4>
+
+    <form action="/addGame/" method="post">
+        {% csrf_token %}
+
+        <label>Game Id:</label>
+        <div>{{form.game_id}}</div>
+
+        <label>Game Name:</label>
+        <div>{{form.game_name}}</div>
+
+        <label>Game Category:</label>
+        <div>{{form.game_category}}</div>
+
+        <label>Game Player:</label>
+        <div>{{form.game_players}}</div>
+
+        <label>Game Downloads:</label>
+        <div>{{form.game_downloads}}</div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+
+    </form>
+</body>
+
+</html>

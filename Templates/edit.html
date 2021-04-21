@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+</head>
+
+<body>
+
+
+    <form action="/update/{{gamestABLE.game_id}}" method="POST">
+        {% csrf_token %}
+
+        <table>
+            <tr>
+                <td><input name="game_id" required value="{{gamestABLE.game_id}}"></td>
+            </tr>
+
+            <tr>
+                <td><input name="game_name" required value="{{gamestABLE.game_name}}"></td>
+            </tr>
+
+            <tr>
+                <td><input name="game_category" required value="{{gamestABLE.game_category}}"></td>
+            </tr>
+
+            <tr>
+                <td><input name="game_players" required value="{{gamestABLE.game_players}}"></td>
+            </tr>
+
+            <tr>
+                <td><input name="game_downloads" required value="{{gamestABLE.game_downloads}}"></td>
+            </tr>
+
+            <tr>
+                <td><button type="submit">Update</button></td>
+            </tr>
+
+        </table>
+
+    </form>
+
+</body>
+
+</html>
